@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Heroku Express template</title>
+	</head>
+	<body>
+		<h2>It's heroku template for static site based on Express</h2>
+		<script>
+			var cb = function() {
+				var l = document.createElement('link'); l.rel = 'stylesheet';
+				l.href = '/assets/styles.css';
+				var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+			};
+			var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+					webkitRequestAnimationFrame || msRequestAnimationFrame;
+			if (raf) raf(cb);
+			else window.addEventListener('load', cb);
+		</script>
+	</body>
+</html>

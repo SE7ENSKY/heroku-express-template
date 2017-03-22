@@ -1,0 +1,25 @@
+{
+  "name": "heroku-express-template",
+  "version": "0.0.1",
+  "description": "Static site's template for Heroku, based on ExpressJS",
+  "engines": {
+    "node": "6.9.4"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SE7ENSKY/heroku-express-template.git"
+  },
+  "keywords": [
+    "heroku",
+    "express"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.6.2",
+    "express": "^4.15.2"
+  }
+}
