@@ -13,7 +13,9 @@ app.get('/*', function (req, res, next) {
   next();
 });
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public', {
+    extensions: ['html']
+}));
 
 app.use((req, res, next) => {
 	res.status(404);
