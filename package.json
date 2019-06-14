@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Static site's template for Heroku, based on ExpressJS",
   "engines": {
-    "node": "^8.11"
+    "node": "^10"
   },
   "scripts": {
     "start": "node index.js",
