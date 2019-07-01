@@ -1,9 +1,8 @@
 const express = require("express");
 const compression = require("compression");
 const app = express();
-const proxy = require("express-http-proxy");
 
-app.set('port', 5000);
+app.set('port', 3000);
 app.use(compression({ threshold: 1024 }));
 
 app.get('/*', function (req, res, next) {
@@ -14,16 +13,9 @@ app.get('/*', function (req, res, next) {
   next();
 });
 
-app.use(express.static(__dirname + '/public', {
+app.use(express.static(__dirname + '/api', {
     extensions: ['html']
 }));
-
-app.use(
-    "/api",
-    proxy("http://0.0.0.0:3000", {
-        proxyReqPathResolver: req => req.url
-    })
-);
 
 app.use((req, res, next) => {
 	res.status(404);
